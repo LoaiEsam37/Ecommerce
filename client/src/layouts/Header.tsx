@@ -2,11 +2,10 @@ import Carousel from "react-bootstrap/Carousel";
 import First_slide from "../assets/pexels-karolina-grabowska-5632371.jpg";
 import Second_slide from "../assets/pexels-pixabay-259200.jpg";
 import Third_slide from "../assets/pexels-pixabay-38519.jpg";
-import "../sass/layouts/Header.scss";
 
 const Header = () => {
   return (
-    <div className="Header container col-12">
+    <div className="header container col-lg-9">
       <Carousel>
         <Carousel.Item>
           <img className="d-block w-100" src={First_slide} alt="First slide" />

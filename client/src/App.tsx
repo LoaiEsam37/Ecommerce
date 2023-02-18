@@ -5,7 +5,9 @@ import "./sass/app.scss";
 function App() {
   return (
     <div className="App">
-      <Home />
+      <div className="row">
+        <Home />
+      </div>
     </div>
   );
 }

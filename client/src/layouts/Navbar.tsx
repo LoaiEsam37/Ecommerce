@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import Collapse from "react-bootstrap/Collapse";
-import "../sass/layouts/Navbar.scss";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <div className="container">
         <a className="navbar-brand" href="#">
           Ecommerce
@@ -50,7 +49,7 @@ const Navbar = () => {
                   </Dropdown.Menu>
                 </Dropdown>
               </li>
-              <hr className="" />
+              <hr />
             </ul>
             <form className="d-flex">
               <input
