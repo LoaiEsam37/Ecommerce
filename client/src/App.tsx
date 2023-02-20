@@ -5,11 +5,16 @@ import Home from "./pages/Home";
 import PageNotFound from "./pages/PageNotFound";
 import Navbar from "./layouts/Navbar";
 import AboutUs from "./pages/AboutUs";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./sass/app.scss";
 
 function App() {
-  const client = new QueryClient();
+  const client = new QueryClient({
+    defaultOptions: {
+      queries: {
+        refetchOnWindowfocus: false,
+      },
+    },
+  });
   return (
     <QueryClientProvider client={client}>
       <Router>
