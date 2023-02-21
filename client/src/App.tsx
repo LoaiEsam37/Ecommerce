@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import PageNotFound from "./pages/PageNotFound";
 import Navbar from "./layouts/Navbar";
 import AboutUs from "./pages/AboutUs";
-import "./sass/app.scss";
 
 function App() {
   const client = new QueryClient({
