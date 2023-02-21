@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import PageNotFound from "./pages/PageNotFound";
 import Navbar from "./layouts/Navbar";
 import AboutUs from "./pages/AboutUs";
+import "./styles/css/style.css";
 
 function App() {
   const client = new QueryClient({
@@ -17,7 +18,10 @@ function App() {
   return (
     <QueryClientProvider client={client}>
       <Router>
-        <Navbar />
+        <span className="text-lg underline bg-blend-color-burn">
+          hello world
+        </span>
+        {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/AboutUs" element={<AboutUs />} />
