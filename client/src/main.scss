@@ -1,0 +1,7 @@
+@use "sass/helpers/mixins" as *;
+
+.header {
+  @include breakpoint(tablet-portrait-up) {
+    font-size: larger;
+  }
+}
