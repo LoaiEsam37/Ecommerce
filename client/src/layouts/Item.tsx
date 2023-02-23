@@ -2,7 +2,7 @@ import React from "react";
 import Axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 
-const Item = () => {
+const Item: React.FC = () => {
   const {
     data: Items,
     isLoading,

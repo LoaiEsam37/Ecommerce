@@ -1,27 +1,24 @@
+// node_modules
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
+// Pages
 import Home from "./pages/Home";
 import PageNotFound from "./pages/PageNotFound";
-import Navbar from "./layouts/Navbar";
 import AboutUs from "./pages/AboutUs";
-import "./styles/css/style.css";
+// layouts
+import Navbar from "./layouts/Navbar";
+// constants
+import Client from "./constants/Client";
 
-function App() {
-  const client = new QueryClient({
-    defaultOptions: {
-      queries: {
-        refetchOnWindowfocus: false,
-      },
-    },
-  });
+const App: React.FC = () => {
   return (
-    <QueryClientProvider client={client}>
+    <QueryClientProvider client={Client}>
       <Router>
         <span className="text-lg underline bg-blend-color-burn">
           hello world
         </span>
-        {/* <Navbar /> */}
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/AboutUs" element={<AboutUs />} />
@@ -30,6 +27,6 @@ function App() {
       </Router>
     </QueryClientProvider>
   );
-}
+};
 
 export default App;

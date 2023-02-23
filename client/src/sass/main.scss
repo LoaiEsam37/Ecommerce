@@ -1,5 +1,6 @@
-@import "./layouts/Header.scss";
-@import "./layouts/Navbar.scss";
+@import "./layouts/Header";
+@import "./layouts/Navbar";
+@import "./vendors/tailwind";
 
 body {
   background-color: #eee;
