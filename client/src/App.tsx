@@ -15,9 +15,6 @@ const App: React.FC = () => {
   return (
     <QueryClientProvider client={Client}>
       <Router>
-        <span className="text-lg underline bg-blend-color-burn">
-          hello world
-        </span>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

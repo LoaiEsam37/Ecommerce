@@ -15,10 +15,10 @@ const Item: React.FC = () => {
   if (isLoading) return <h1>loading...</h1>;
 
   return (
-    <div className="h1">
+    <div className="">
       <button onClick={refetch}>refresh</button>
-      {!isError && <div>Items:-</div>}
-      {Items?.data.map((item, index) => {
+      {!isError ? <div>Items:-</div> : <div>Something went wrong</div>}
+      {Items?.data.map((item: object) => {
         return <div>{item.attributes.name}</div>;
       })}
     </div>
