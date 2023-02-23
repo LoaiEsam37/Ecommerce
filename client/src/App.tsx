@@ -1,17 +1,19 @@
+// node_modules
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClientProvider } from "@tanstack/react-query";
+// Pages
 import Home from "./pages/Home";
 import PageNotFound from "./pages/PageNotFound";
-import Navbar from "./layouts/Navbar";
 import AboutUs from "./pages/AboutUs";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "./sass/app.scss";
+// layouts
+import Navbar from "./layouts/Navbar";
+// constants
+import Client from "./constants/Client";
 
-function App() {
-  const client = new QueryClient();
+const App: React.FC = () => {
   return (
-    <QueryClientProvider client={client}>
+    <QueryClientProvider client={Client}>
       <Router>
         <Navbar />
         <Routes>
@@ -22,6 +24,6 @@ function App() {
       </Router>
     </QueryClientProvider>
   );
-}
+};
 
 export default App;

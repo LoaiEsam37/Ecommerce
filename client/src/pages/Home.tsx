@@ -1,11 +1,7 @@
-import Header from "../layouts/Header";
+import React from "react";
 
-const Home = () => {
-  return (
-    <div>
-      <Header />
-    </div>
-  );
-};
+function Home() {
+  return <div>Home</div>;
+}
 
 export default Home;
