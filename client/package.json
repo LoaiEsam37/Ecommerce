@@ -9,7 +9,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "build:tailwind": "npx tailwindcss ./src/sass/vendors/tailwind.css -o ./src/sass/vendors/tailwind.scss",
-    "watch:sass": "npx stylelint '**/*.scss'"
+    "watch:sass": "stylelint '**/*.scss' --fix"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.2",
